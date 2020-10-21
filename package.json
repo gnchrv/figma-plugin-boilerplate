@@ -1,0 +1,17 @@
+{
+  "name": "figma-plugin-name",
+  "version": "1.0.0",
+  "description": "Figma Plugin Description",
+  "scripts": {
+    "build": "webpack",
+    "watch": "nodemon --watch ./src --ext ts --exec npm run build"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.17.1",
+    "nodemon": "^2.0.5",
+    "ts-loader": "^8.0.5",
+    "typescript": "^4.0.3",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0"
+  }
+}

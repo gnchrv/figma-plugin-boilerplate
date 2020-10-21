@@ -1,0 +1,16 @@
+{
+    "name": "Plugin Name",
+    "id": "000000000000000000",
+    "api": "1.0.0",
+    "main": "dist/index.js",
+    "menu": [
+        {
+            "name": "First Command",
+            "command": "first-command"
+        },
+        {
+            "name": "Second Command",
+            "command": "second-command"
+        }
+    ]
+}
