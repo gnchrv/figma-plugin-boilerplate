@@ -1,7 +1,6 @@
-import * as lib from './lib'
+if (figma.command == 'first-command')
+    console.log('The first command was executed')
 
-if (figma.command === 'stick-to-top')    lib.stick('y', true)
-if (figma.command === 'stick-to-bottom') lib.stick('y', false)
-if (figma.command === 'stick-to-left')   lib.stick('x', true)
-if (figma.command === 'stick-to-right')  lib.stick('x', false)
+if (figma.command == 'second-command')
+    console.log('The second command was executed')
 
