@@ -2,6 +2,7 @@
     "name": "Plugin Name",
     "id": "000000000000000000",
     "api": "1.0.0",
+    "editorType": ["figma", "figjam"],
     "main": "dist/index.js",
     "menu": [
         {
