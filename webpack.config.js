@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+    // Output production-ready code with all the optimizations (see https://webpack.js.org/configuration/mode/)
+    mode: 'production',
+
     // Consider index.ts as an entry point
     entry: './src/index.ts',
 
