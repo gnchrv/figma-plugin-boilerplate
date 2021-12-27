@@ -4,7 +4,7 @@ module.exports = {
     // Consider index.ts as an entry point
     entry: './src/index.ts',
 
-    // Specify the rules for handling different file types
+    // Specify rules for handling different file types
     module: {
         rules: [
             {
@@ -17,13 +17,15 @@ module.exports = {
     },
 
     resolve: {
-        // If multiple files share the same name but have different extensions, webpack will resolve the one with the extension listed first in the array and skip the rest: https://webpack.js.org/configuration/resolve/#resolveextensions. This list will enable us to leave off the extension when importing
+        // If multiple files share the same name but have different extensions, webpack will resolve the one with
+        // the extension listed first in the array and skip the rest:
+        // https://webpack.js.org/configuration/resolve/#resolveextensions. This list will enable us to leave off an extension when importing
         extensions: ['.ts', '.tsx', '.js']
     },
 
-    // Save the results in index.js file located in /dist
+    // Save results in index.js file located in /dist
     output: {
         filename: 'index.js',
         path: path.resolve('dist')
     }
-}
+};
