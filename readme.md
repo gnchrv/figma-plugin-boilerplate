@@ -1,6 +1,6 @@
 # Figma Plugin Boilerplate
 
-This is a small template that can be used to create a Figma plugin. It relies on Webpack to compile TypeScript code 
+This is a small template that can be used to create a Figma plugin. It relies on [esbuild](https://esbuild.github.io) to compile TypeScript code 
 into `.js`-files and currently doesn't provide the ability to create a GUI (probably will add an `ui.html` later). Suits well to quickly create simple plugins. 
 
 ## How to use
