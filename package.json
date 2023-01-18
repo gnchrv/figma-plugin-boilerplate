@@ -1,13 +1,13 @@
 {
-  "name": "figma-plugin-name",
-  "version": "1.0.0",
-  "description": "Figma Plugin Description",
-  "scripts": {
-    "build": "node esbuild build",
-    "watch": "node esbuild watch"
-  },
-  "devDependencies": {
-    "@figma/plugin-typings": "^1.51.0",
-    "esbuild": "^0.15.7"
-  }
+    "name": "figma-plugin-name",
+    "version": "1.0.0",
+    "description": "Figma Plugin Description",
+    "scripts": {
+        "build": "node esbuild build",
+        "watch": "node esbuild watch"
+    },
+    "devDependencies": {
+        "@figma/plugin-typings": "^1.51.0",
+        "esbuild": "^0.15.7"
+    }
 }
