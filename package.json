@@ -1,11 +1,10 @@
 {
     "name": "figma-plugin-name",
     "version": "2.0.0",
-    "type": "module",
     "description": "Figma Plugin Description",
     "scripts": {
-        "dev": "node esbuild watch",
-        "build": "tsc; node esbuild build"
+        "dev": "node esbuild.mjs watch",
+        "build": "tsc; node esbuild.mjs build"
     },
     "devDependencies": {
         "@figma/plugin-typings": "^1.57.1",
