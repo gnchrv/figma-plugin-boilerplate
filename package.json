@@ -1,13 +1,15 @@
 {
-  "name": "figma-plugin-name",
-  "version": "1.0.0",
-  "description": "Figma Plugin Description",
-  "scripts": {
-    "build": "node esbuild build",
-    "watch": "node esbuild watch"
-  },
-  "devDependencies": {
-    "@figma/plugin-typings": "^1.51.0",
-    "esbuild": "^0.15.7"
-  }
+    "name": "figma-plugin-name",
+    "version": "2.0.0",
+    "description": "Figma Plugin Description",
+    "scripts": {
+        "dev": "node esbuild.mjs watch",
+        "build": "tsc; node esbuild.mjs build"
+    },
+    "devDependencies": {
+        "@figma/plugin-typings": "^1.57.1",
+        "esbuild": "^0.17.3",
+        "ts-loader": "^9.4.2",
+        "typescript": "^4.9.4"
+    }
 }

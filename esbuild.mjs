@@ -1,7 +1,9 @@
+import esbuild from 'esbuild'
+
 // Basic options
 const options = {
 
-    // Entry points and a path to a final bundle
+    // Entry points and the path to the final bundle
     entryPoints: ['src/index.ts'],
     outdir: 'dist',
 
@@ -18,20 +20,19 @@ const options = {
 }
 
 // Different types of builds
-const builds = {
+const configs = {
 
-    // The default one. Contains only the options listed above
-    'build': () => options,
+    // The default one. Builds right away
+    'build': () => esbuild.build(options),
 
-    // The watching one. Contains additional flag asking esbuild to watch for changes
-    'watch': () => ({ ...options, watch: true })
+    // The watching one. Set the context first and starts the watchg process later
+    'watch': () => esbuild.context(options).then(r => r.watch())
 }
 
 /* 
-Run the config. A command of type `node esbuild.js watch` should be used. The third element of the command will be used as a build name
+Run the config. A command of the type `node esbuild.js watch` should be used. The third element of the command will be treated as a config name
 */
-require('esbuild')
-    .build(builds[process.argv[2]]())
+await configs[process.argv[2]]()
     .catch(e => {
         console.error(e)
         process.exit(1)
