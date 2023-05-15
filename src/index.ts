@@ -1,9 +1,5 @@
-if (figma.command == 'first-command') {
-    console.log('The first command was executed')
-    figma.closePlugin()
-}
+if (figma.command == 'first-command')
+    figma.closePlugin('The first command was executed')
 
-if (figma.command == 'second-command') {
-    console.log('The second command was executed')
-    figma.closePlugin()
-}
+if (figma.command == 'second-command')
+    figma.closePlugin('The second command was executed')
