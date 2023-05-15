@@ -15,7 +15,7 @@ const options = {
     // A target environment (esbuild doesn’t support this option specified in tsconfig.json)
     target: 'es6',
 
-    // Log level is specified in order to print basic information even when launched as an npm script from package.json
+    // Log level is specified in order to print basic information even when esbuild launched as an npm script from package.json
     logLevel: 'info'
 }
 
@@ -25,7 +25,7 @@ const configs = {
     // The default one. Builds right away
     'build': () => esbuild.build(options),
 
-    // The watching one. Set the context first and starts the watchg process later
+    // The watching one. Sets the context first and starts the watchg process later
     'watch': () => esbuild.context(options).then(r => r.watch())
 }
 

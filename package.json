@@ -1,6 +1,6 @@
 {
     "name": "figma-plugin-name",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Figma Plugin Description",
     "scripts": {
         "dev": "node esbuild.mjs watch",
