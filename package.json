@@ -3,13 +3,29 @@
     "version": "2.0.1",
     "description": "Figma Plugin Description",
     "scripts": {
-        "dev": "node esbuild.mjs watch",
-        "build": "tsc; node esbuild.mjs build"
+        "plugin:tsc": "tsc -p plugin/tsconfig.json",
+        "plugin:esbuild": "node plugin/esbuild.mjs",
+        "plugin:dev": "npm run plugin:esbuild -- watch",
+        "plugin:build": "npm run plugin:tsc && npm run plugin:esbuild -- build",
+        "ui:tsc": "tsc -p ui/tsconfig.json",
+        "ui:vite": "vite --config ui/vite.config.ts",
+        "ui:dev": "npm run ui:vite -- build --watch",
+        "ui:build": "npm run ui:vite && npm run ui:tsc"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "@figma/plugin-typings": "^1.64.0",
+        "@types/react": "^18.0.37",
+        "@types/react-dom": "^18.0.11",
+        "@vitejs/plugin-react": "^4.0.0",
         "esbuild": "^0.17.19",
-        "ts-loader": "^9.4.2",
-        "typescript": "^5.0.4"
+        "sass": "^1.63.6",
+        "typescript": "^5.0.4",
+        "vite": "^4.3.9",
+        "vite-plugin-singlefile": "^0.13.5",
+        "vite-plugin-svgr": "^3.2.0"
     }
 }

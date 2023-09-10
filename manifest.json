@@ -3,15 +3,16 @@
     "id": "000000000000000000",
     "api": "1.0.0",
     "editorType": ["figma", "figjam"],
-    "main": "dist/index.js",
+    "main": "dist/plugin/index.js",
+    "ui": "dist/ui/index.html",
     "menu": [
         {
-            "name": "First Command",
-            "command": "first-command"
+            "name": "Plugin Command",
+            "command": "plugin-command"
         },
         {
-            "name": "Second Command",
-            "command": "second-command"
+            "name": "Plugin Command With UI",
+            "command": "plugin-command-with-ui"
         }
     ]
 }
