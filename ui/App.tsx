@@ -13,7 +13,7 @@ function App() {
         const newCount = count + 1
 
         /* 
-        Ask React to change the value. Don’t increase the value inside the `setCount` callback, because the state won’t be updated before the next re-render. See: https://react.dev/reference/react/useState#ive-updated-the-state-but-logging-gives-me-the-old-value
+        Ask React to change the value. Don’t increase the value right inside the `setCount` callback, because the state won’t be updated before the next re-render and we won’t be able to access the new value until then. See: https://react.dev/reference/react/useState#ive-updated-the-state-but-logging-gives-me-the-old-value
          */
         setCount(newCount)
 
@@ -21,7 +21,7 @@ function App() {
         parent.postMessage({ pluginMessage: { count: newCount } }, '*')
     }
 
-    // Compose a label that is gramatically correct
+    // Compose a gramatically correct label
     const label = count === 1
         ? `A rectangle has been created`
         : `${count} rectangles have been created`
