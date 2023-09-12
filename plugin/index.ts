@@ -10,6 +10,8 @@ if (figma.command == 'plugin-command-with-ui') {
         themeColors: true,
         width: 400,
         height: 100
+        width: 300,
+        height: 62
     })
 
     // Create a variable to store the rectangles that will be created
@@ -22,6 +24,9 @@ if (figma.command == 'plugin-command-with-ui') {
         const { count } = message
 
         // Create a rectangle
+        /* Initially, the UI contains only a button. So if we are creating the first rectangle, we should resize the UI to make room for the label that keeps track on the number of rectangles created */
+        figma.ui.resize(300, 88)
+
         const rectangle = figma.createRectangle()
 
         // Set the rectangle name

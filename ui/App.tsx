@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Button from './components/button/button'
 
 function App() {
 
@@ -22,18 +23,31 @@ function App() {
 
     // Compose a label that is gramatically correct
     const label = count === 1
-        ? <p>A rectangle has been created</p>
-        : <p>{count} rectangles have been created</p>
+        ? `A rectangle has been created`
+        : `${count} rectangles have been created`
 
     return <>
 
         {/* Render a button */}
-        <button onClick={handleClick}>
-            Create a rectangle
-        </button >
+        <Button
+            onClick={handleClick}
+            className='button'
+            style={{ width: '100%' }}
+        >
+            Create a rectagle
+        </Button>
 
-        {/* Render a label only if some rectangles have been created */}
-        {count > 0 ? label : null}
+        {/* Render a label. Show it only if some rectangles have been created */}
+        <p
+            style={{
+                fontSize: '0.6rem',
+                marginTop: '0.5rem',
+                color: 'var(--figma-color-text-tertiary)',
+                textAlign: 'center'
+            }}
+        >
+            {count > 0 ? label : null}
+        </p>
     </>
 }
 
