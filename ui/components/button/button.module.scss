@@ -1,0 +1,19 @@
+.button {
+    color: var(--figma-color-text-oninverse);
+    background-color: var(--figma-color-bg-brand);
+    border: none;
+    border-radius: 0.3rem;
+    font-family: var(--f-family-brand);
+    font-size: .6rem;
+    font-weight: 500;
+    padding: .65rem 1rem;
+
+    &:focus {
+        outline: solid .15rem var(--figma-color-border-brand-strong);
+        outline-offset: -.15rem;
+    }
+    &:active {
+        background-color: var(--figma-color-border-brand-strong);
+        transform: translateY(.05rem);
+    }
+}

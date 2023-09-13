@@ -4,8 +4,8 @@ import esbuild from 'esbuild'
 const options = {
 
     // Entry points and the path to the final bundle
-    entryPoints: ['src/index.ts'],
-    outdir: 'dist',
+    entryPoints: ['plugin/index.ts'],
+    outdir: 'dist/plugin',
 
     // Whether to bundle together, minify and add a source map
     bundle: true,
