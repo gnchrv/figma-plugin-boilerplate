@@ -6,6 +6,7 @@
 
 This is a boilerplate that helps to quickly start Figma plugin development without the need to configure compilers and bundlers, assuming you are familiar with React and TypeScript.
 
+## Project Structure
 The template provides two separate folders to work independently on the backend logic and UI. The folders contain their own `tsconfig.json` files and provide additional configs for the respective bundlers. The `/plugin` folder includes the esbuild configuration file, while the `/ui` folder contains Vite settings.
 
 In the `/plugin` folder, `index.ts` serves as an entry point for the backend logic, and in the `ui/` folder `main.tsx` serves the same purpose for the UI. Feel free to move things around and add additional structures inside these folders as needed. Don’t forget to adjust the config files in case the entry points are changed.
@@ -26,8 +27,8 @@ figma-plugin-boilerplate/
 │  ├─ …
 ```
 
-## Scripts from `package.json`
-There are two sets of commands: one for working on the plugin logic and the other for building the UI. During the development process, run `plugin:dev` and `ui:dev` in parallel to track changes from both sides. To build the code, execute `plugin:build` followed by `ui:build`.
+## List of Scripts
+There are two sets of commands in `package.json`: one for working on the plugin logic and the other for building the UI. During the development process, run `plugin:dev` and `ui:dev` in parallel to track changes from both sides. To build the code, execute `plugin:build` followed by `ui:build`.
 
 ```json
 "scripts": {
@@ -43,7 +44,7 @@ There are two sets of commands: one for working on the plugin logic and the othe
 }
 ```
 
-## How to create a new plugin
+## Development Process
 1. Clone this repository and install developer dependencies using `npm install -D` command.
 2. In Figma, go to `Plugins` → `Development` → `New Plugin…` and enter your plugin name (it can be an arbitary string, it won’t be used anywhere). 
 3. On the same screen, choose the type of the plugin: it could be either `Figma design + FigJam` or just `Figma design`. After that, click “Next“.
@@ -53,6 +54,11 @@ There are two sets of commands: one for working on the plugin logic and the othe
 7. Back in Figma, go to `Plugins` → `Manage Plugins…`, find the plugin you’ve created and remove it. 
 8. Then, go to `Plugins` → `Development` → `Import plugin from manifest…` and select `manifest.json` *stored in this repository*.
 9. Write some code, save and build it.
+
+## Plugins Built Upon This Template
+- [Count Layers](https://www.figma.com/community/plugin/900867721222656652/Count-Layers)
+- [Toggle Clip Content](https://www.figma.com/community/plugin/1108861824194364527/Toggle-Clip-Content)
+- [Select Siblings in Auto-Layout](https://www.figma.com/community/plugin/1023271295543606907/Select-Siblings-in-Auto-Layout)
 
 ## References
 1. [Figma's introduction to plugin development](https://www.figma.com/plugin-docs/intro/)
