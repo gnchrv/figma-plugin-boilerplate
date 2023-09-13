@@ -2,7 +2,9 @@
 
 > A template for creating Figma plugins using React and TypeScript and building them with [Vite](https://vitejs.dev) and [esbuild](https://esbuild.github.io). Contains the code of a sample plugin that creates rectangles on the canvas when user clicks a button.
 
-This is a boilerplate that helps to quickly hop on the Figma plugin development process without configuring any compilers and bundlers, if you are familiar with React and TypeScript.
+![A demo of the sample plugin](https://github.com/gnchrv/figma-plugin-boilerplate/assets/10423326/ca1cfdf6-a2fa-4e72-998d-299b3384496c)
+
+This is a boilerplate that helps to quickly start Figma plugin development without the need to configure compilers and bundlers, assuming you are familiar with React and TypeScript.
 
 The template provides two separate folders to work independently on the backend logic and UI. The folders contain their own `tsconfig.json` files and provide additional configs for the respective bundlers. The `/plugin` folder includes the esbuild configuration file, while the `/ui` folder contains Vite settings.
 
