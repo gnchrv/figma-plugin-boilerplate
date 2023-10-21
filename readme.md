@@ -1,15 +1,13 @@
 # Figma Plugin Boilerplate
 
-> A template for creating Figma plugins using React and TypeScript and building them with [Vite](https://vitejs.dev) and [esbuild](https://esbuild.github.io). Contains the code of a sample plugin that creates rectangles on the canvas when user clicks a button.
+> A little template for creating Figma plugins with React and TypeScript, while [Vite](https://vitejs.dev) and [esbuild](https://esbuild.github.io) are used to bundle the code. The code contains an example of the sample plugin that creates rectangles on the canvas when user clicks a button.
 
 ![A demo of the sample plugin](https://github.com/gnchrv/figma-plugin-boilerplate/assets/10423326/ca1cfdf6-a2fa-4e72-998d-299b3384496c)
 
-This is a boilerplate that helps to quickly start Figma plugin development without the need to configure compilers and bundlers, assuming you are familiar with React and TypeScript.
-
 ## Project Structure
-The template provides two separate folders to work independently on the backend logic and UI. The folders contain their own `tsconfig.json` files and provide additional configs for the respective bundlers. The `/plugin` folder includes the esbuild configuration file, while the `/ui` folder contains Vite settings.
+The template provides two separate folders to work on the backend logic and the UI independently. Each folder contains its own `tsconfig.json` file and additional configs for the respective bundlers. The `/plugin` folder includes the esbuild configuration file, while the `/ui` folder contains Vite settings.
 
-In the `/plugin` folder, `index.ts` serves as an entry point for the backend logic, and in the `ui/` folder `main.tsx` serves the same purpose for the UI. Feel free to move things around and add additional structures inside these folders as needed. Don’t forget to adjust the config files in case the entry points are changed.
+In the `/plugin` folder, `index.ts` serves as an entry point for the backend logic, while in the `ui/` folder, `main.tsx` serves the same purpose for the UI. Feel free to move things around and add additional structures inside these folders as needed. Don’t forget to adjust the config files in case the entry points are changed.
 
 ```
 figma-plugin-boilerplate/
@@ -28,7 +26,7 @@ figma-plugin-boilerplate/
 ```
 
 ## List of Scripts
-There are two sets of commands in `package.json`: one for working on the plugin logic and the other for building the UI. During the development process, run `plugin:dev` and `ui:dev` in parallel to track changes from both sides. To build the code, execute `plugin:build` followed by `ui:build`.
+There are two sets of commands in `package.json`: one covers the plugin logic and the other is for the UI development. Run `plugin:dev` and `ui:dev` in parallel to track changes from both sides. To build the production code, execute `plugin:build` followed by `ui:build`.
 
 ```json
 "scripts": {
