@@ -30,15 +30,19 @@ There are two sets of commands in `package.json`: one covers the plugin logic an
 
 ```json
 "scripts": {
+    // Plugin (aka backend) related scripts
     "plugin:tsc":     "tsc -p plugin/tsconfig.json",
-    "plugin:esbuild": "node plugin/esbuild.mjs",
-    "plugin:dev":     "npm run plugin:esbuild -- watch",
-    "plugin:build":   "npm run plugin:tsc && npm run plugin:esbuild -- build",
+    "plugin:dev":     "npm run esbuild -- watch",
+    "plugin:build":   "npm run plugin:tsc && npm run esbuild -- build",
 
+    // UI scripts
     "ui:tsc":         "tsc -p ui/tsconfig.json",
-    "ui:vite":        "vite --config ui/vite.config.ts",
-    "ui:dev":         "npm run ui:vite -- build --watch",
-    "ui:build":       "npm run ui:vite && npm run ui:tsc"
+    "ui:dev":         "npm run vite:build -- --watch",
+    "ui:build":       "npm run vite:build && npm run ui:tsc",
+
+    // Technical scripts 
+    "esbuild": "node plugin/esbuild.mjs",
+    "vite:build": "vite build --config ui/vite.config.ts"
 }
 ```
 
