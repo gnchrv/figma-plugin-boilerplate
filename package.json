@@ -4,12 +4,14 @@
     "description": "Figma Plugin Description",
     "scripts": {
         "plugin:tsc": "tsc -p plugin/tsconfig.json",
-        "plugin:esbuild": "node plugin/esbuild.mjs",
-        "plugin:dev": "npm run plugin:esbuild -- watch",
-        "plugin:build": "npm run plugin:tsc && npm run plugin:esbuild -- build",
+        "plugin:dev": "npm run esbuild -- watch",
+        "plugin:build": "npm run plugin:tsc && npm run esbuild -- build",
+        
         "ui:tsc": "tsc -p ui/tsconfig.json",
         "ui:dev": "npm run vite:build -- --watch",
         "ui:build": "npm run vite:build && npm run ui:tsc",
+        
+        "esbuild": "node plugin/esbuild.mjs",
         "vite:build": "vite build --config ui/vite.config.ts"
     },
     "dependencies": {
