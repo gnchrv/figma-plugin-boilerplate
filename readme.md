@@ -28,7 +28,7 @@ figma-plugin-boilerplate/
 ## List of Scripts
 There are two sets of commands in `package.json`: one covers the plugin logic and the other is for the UI development. Run `plugin:dev` and `ui:dev` in parallel to track changes from both sides. To build the production code, execute `plugin:build` followed by `ui:build`.
 
-```json
+```jsonc
 "scripts": {
     // Plugin (aka backend) related scripts
     "plugin:tsc":     "tsc -p plugin/tsconfig.json",
