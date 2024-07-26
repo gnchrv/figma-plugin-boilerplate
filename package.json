@@ -6,25 +6,23 @@
         "plugin:tsc": "tsc -p plugin/tsconfig.json",
         "plugin:dev": "npm run esbuild -- watch",
         "plugin:build": "npm run plugin:tsc && npm run esbuild -- build",
-        
         "ui:tsc": "tsc -p ui/tsconfig.json",
         "ui:dev": "npm run vite:build -- --watch",
         "ui:build": "npm run vite:build && npm run ui:tsc",
-        
         "esbuild": "node plugin/esbuild.mjs",
         "vite:build": "vite build --config ui/vite.config.ts"
     },
     "dependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@figma/plugin-typings": "^1.86.0",
-        "@types/react": "^18.2.56",
-        "@types/react-dom": "^18.2.19",
+        "@figma/plugin-typings": "^1.97.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
         "@vitejs/plugin-react": "^4.3.1",
         "esbuild": "^0.20.1",
-        "sass": "^1.71.0",
+        "sass": "^1.77.8",
         "typescript": "^5.3.3",
         "vite": "^5.3.5",
         "vite-plugin-singlefile": "^2.0.2",
