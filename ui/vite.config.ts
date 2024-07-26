@@ -24,7 +24,7 @@ export default defineConfig({
 
     build: {
 
-        // Target the 
+        // Set ES6 as a target, similar to Figma’s own example of tsconfig.js: https://www.figma.com/plugin-docs/libraries-and-bundling/#setup-typescript-with-webpack
         target: 'es6',
 
         // Specify the output folder and ask to rewrite upon each compilation

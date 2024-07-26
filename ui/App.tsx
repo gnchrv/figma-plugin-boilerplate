@@ -34,7 +34,7 @@ function App() {
             className='button'
             style={{ width: '100%' }}
         >
-            Create a rectagle
+            Create a rectangle
         </Button>
 
         {/* Render a label. Show it only if some rectangles have been created */}
