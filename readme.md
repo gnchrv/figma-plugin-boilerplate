@@ -42,7 +42,8 @@ There are two sets of commands in `package.json`: one covers the plugin logic an
 
     // Technical scripts 
     "esbuild": "node plugin/esbuild.mjs",
-    "vite:build": "vite build --config ui/vite.config.ts"
+    "vite:build": "vite build --config ui/vite.config.ts",
+    "lint": "eslint"
 }
 ```
 
