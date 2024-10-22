@@ -37,5 +37,10 @@ export default defineConfig({
 
         // Disable CSS code splitting and load all the styles in advance
         cssCodeSplit: false,
+    },
+
+    // Ensure Vite is using modern JS API for SCSS. See more here: https://sass-lang.com/documentation/breaking-changes/legacy-js-api/#bundlers
+    css: {
+        preprocessorOptions: { scss: { api: 'modern-compiler' } }
     }
 })
