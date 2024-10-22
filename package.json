@@ -12,7 +12,7 @@
         "ui:build": "npm run vite:build && npm run ui:tsc",
         "esbuild": "node plugin/esbuild.mjs",
         "vite:build": "vite build --config ui/vite.config.ts",
-        "lint": "eslint"
+        "lint": "eslint ."
     },
     "dependencies": {
         "react": "^18.3.1",
