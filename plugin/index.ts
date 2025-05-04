@@ -1,3 +1,6 @@
+// Regarding of the command, check if environment variables are available
+console.log(process.env.EXAMPLE_API_KEY)
+
 // Handle the execution of the first command
 if (figma.command == 'plugin-command')
     figma.closePlugin('The plugin command was executed')

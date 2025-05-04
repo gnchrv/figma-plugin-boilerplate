@@ -3,6 +3,9 @@
     "version": "2.0.1",
     "description": "Figma Plugin Description",
     "type": "module",
+    "engines": {
+        "node": ">=20.6.0"
+    },
     "scripts": {
         "plugin:tsc": "tsc -p plugin/tsconfig.json",
         "plugin:dev": "npm run esbuild -- watch",
@@ -10,7 +13,7 @@
         "ui:tsc": "tsc -p ui/tsconfig.json",
         "ui:dev": "npm run vite:build -- --watch",
         "ui:build": "npm run vite:build && npm run ui:tsc",
-        "esbuild": "node plugin/esbuild.mjs",
+        "esbuild": "node --env-file=.env plugin/esbuild.mjs",
         "vite:build": "vite build --config ui/vite.config.ts",
         "lint": "eslint ."
     },
