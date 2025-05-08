@@ -5,6 +5,10 @@
     "editorType": ["figma", "figjam"],
     "main": "dist/plugin/index.js",
     "ui": "dist/ui/index.html",
+    "documentAccess": "dynamic-page",
+    "networkAccess": {
+        "allowedDomains": [ "none" ]
+    },
     "menu": [
         {
             "name": "Plugin Command",
