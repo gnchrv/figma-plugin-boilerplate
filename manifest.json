@@ -2,9 +2,17 @@
     "name": "Plugin Name",
     "id": "000000000000000000",
     "api": "1.0.0",
-    "editorType": ["figma", "figjam"],
+    "editorType": [
+        "figma",
+        "figjam",
+        "slides"
+    ],
     "main": "dist/plugin/index.js",
     "ui": "dist/ui/index.html",
+    "documentAccess": "dynamic-page",
+    "networkAccess": {
+        "allowedDomains": [ "none" ]
+    },
     "menu": [
         {
             "name": "Plugin Command",
