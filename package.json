@@ -1,6 +1,6 @@
 {
     "name": "figma-plugin-name",
-    "version": "2.0.1",
+    "version": "3.2.0",
     "description": "Figma Plugin Description",
     "type": "module",
     "engines": {
@@ -10,15 +10,12 @@
         "dev": "npx concurrently --raw \"npm run plugin:dev\" \"npm run ui:dev\"",
         "build": "npm run lint && npm run plugin:build && npm run ui:build",
         "lint": "eslint .",
-        
         "plugin:tsc": "npx tsc -p plugin/tsconfig.json",
         "plugin:dev": "npm run esbuild -- watch",
         "plugin:build": "npm run plugin:tsc && npm run esbuild -- build",
-        
         "ui:tsc": "npx tsc -p ui/tsconfig.json",
         "ui:dev": "npm run vite:build -- --watch",
         "ui:build": "npm run vite:build && npm run ui:tsc",
-
         "esbuild": "node --env-file=.env plugin/esbuild.mjs",
         "vite:build": "vite build --config ui/vite.config.ts"
     },
