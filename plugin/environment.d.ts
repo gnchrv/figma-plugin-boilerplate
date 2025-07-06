@@ -1,8 +1,12 @@
-// Declare environment variables types
+/* 
+Declare environment variable types.
+
+Since Node.js environment variables are not available in the Figma plugin environment, create a constant called `process` instead of extending the namespace of existing Node.js environment variables, as they do not exist here.
+*/
 declare global {
-    namespace NodeJS {
-        interface ProcessEnv {
-            EXAMPLE_API_KEY: string
+    const process: {
+        env: {
+            EXAMPLE_API_KEY?: string
         }
     }
 }
