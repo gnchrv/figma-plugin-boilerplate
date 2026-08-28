@@ -1,14 +1,14 @@
-// Regarding of the command, check if environment variables are available
+// Print the value of the environment variable to test it
 console.log(process.env.EXAMPLE_API_KEY)
 
 // Handle the execution of the first command
-if (figma.command == 'plugin-command')
+if (figma.command === 'plugin-command')
     figma.closePlugin('The plugin command was executed')
 
 // Configure the command that involves a UI
-if (figma.command == 'plugin-command-with-ui') {
+if (figma.command === 'plugin-command-with-ui') {
 
-    // Present a UI, providing it with Figma CSS color variables
+    // Present a UI, providing it with Figma CSS colour variables
     figma.showUI(__html__, {
         themeColors: true,
         width: 300,

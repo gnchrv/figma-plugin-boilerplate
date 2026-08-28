@@ -9,7 +9,7 @@
     "scripts": {
         "dev": "concurrently --raw \"npm run plugin:dev\" \"npm run ui:dev\"",
         "build": "npm run lint && npm run plugin:build && npm run ui:build",
-        "lint": "eslint .",
+        "lint": "eslint . --max-warnings=0",
         "plugin:tsc": "tsc -b plugin/tsconfig.json",
         "plugin:dev": "npm run esbuild -- watch",
         "plugin:build": "npm run plugin:tsc && npm run esbuild -- build",

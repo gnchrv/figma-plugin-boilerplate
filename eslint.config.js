@@ -20,6 +20,7 @@ export default [
             'semi': ['warn', 'never'],
             'quotes': ['warn', 'single', { 'allowTemplateLiterals': true }],
             'no-unused-expressions': 'warn',
+            'eqeqeq': ['warn', 'always'],
             '@typescript-eslint/no-unused-vars': 'warn',
             'indent': ['warn', 4],
             'eol-last': ['warn', 'never'],
