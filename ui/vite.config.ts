@@ -24,8 +24,8 @@ export default defineConfig({
 
     build: {
 
-        // Set ES6 as a target, similar to Figma’s own example of tsconfig.js: https://www.figma.com/plugin-docs/libraries-and-bundling/#setup-typescript-with-webpack
-        target: 'es6',
+        /* Match the target set in `tsconfig.app.json` and in the plugin’s own build. Besides, the UI runs in a Chromium iframe rather than in Figma’s plugin sandbox — no reason to compile down or match the sandbox’s requirements */
+        target: 'es2020',
 
         // Specify the output folder and ask to rewrite upon each compilation
         outDir: '../dist/ui',
