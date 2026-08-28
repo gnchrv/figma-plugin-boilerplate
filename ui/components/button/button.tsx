@@ -1,13 +1,14 @@
+import type { CSSProperties, MouseEventHandler } from 'react'
 import styles from './button.module.scss'
 
 /**
  * Represents the properties of a button component
  */
 export interface ButtonProps {
-    onClick?: React.MouseEventHandler<HTMLButtonElement>,
+    onClick?: MouseEventHandler<HTMLButtonElement>,
     children?: string,
     className?: string,
-    style?: React.CSSProperties
+    style?: CSSProperties
 }
 
 /**
@@ -16,9 +17,15 @@ export interface ButtonProps {
  * @returns The button component
  */
 export default function Button(props: ButtonProps) {
+
+    // Append the custom class only when one is given
+    const className = props.className
+        ? styles.button + ' ' + props.className
+        : styles.button
+
     return <button
         onClick={props.onClick}
-        className={styles.button + ' ' + props.className}
+        className={className}
         style={props.style}
     >
         {props.children ?? 'Button'}
