@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "tsBuildInfoFile": "../node_modules/.tmp/plugin.app.tsbuildinfo",
+        "strict": true,
+        "noEmit": true,
+        "target": "es2020",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+
+        // Load Figma’s typings
+        "types": [ "@figma/plugin-typings" ],
+
+        // Skip checking type libraries because of this issue: https://github.com/figma/plugin-typings/issues/90
+        "skipLibCheck": true
+    },
+
+    "include": [ "." ],
+
+    // Exclude the bundler script handled by `tsconfig.node.json
+    "exclude": [ "esbuild.mjs" ]
+}

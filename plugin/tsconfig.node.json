@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "tsBuildInfoFile": "../node_modules/.tmp/plugin.node.tsbuildinfo",
+        "skipLibCheck": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "noEmit": true,
+
+        /* Load the Node.js typings, so that `process.argv` and the rest of the Node.js API resolve here. This project never sees `environment.d.ts`, whose `process` declaration describes the plugin sandbox rather than Node.js */
+        "types": [ "node" ],
+
+        // Let the `.mjs` script become a part of the project and hold it to the same standard as the TypeScript sources
+        "allowJs": true,
+        "checkJs": true
+    },
+
+    "include": [ "esbuild.mjs" ]
+}

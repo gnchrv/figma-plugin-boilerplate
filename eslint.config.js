@@ -26,7 +26,7 @@ export default [
             'comma-dangle': ['warn', 'never'],
             'no-irregular-whitespace': 'off',
             'perfectionist/sort-imports': ['warn', {
-                newlinesBetween: 'never',
+                newlinesBetween: 0,
                 type: 'line-length'
             }]
         }

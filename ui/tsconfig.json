@@ -1,11 +1,16 @@
+/* This config is a solution file: it compiles nothing and just references two other independent configs — for the React app at runtime and Vite’s config at build time */
+
 {
+    // Compile nothing. The compilation will be handled by other config files downstream
     "files": [],
+
+    // The references field contains two independent configs. Their projects are compiled separately and never merged (in comparison to the `extends` field)
     "references": [
-        {
-            "path": "./tsconfig.app.json"
-        },
-        {
-            "path": "./tsconfig.node.json"
-        }
+
+        // The main config of the React app
+        { "path": "./tsconfig.app.json" },
+
+        // The config for running `vite.config.ts` at build time
+        { "path": "./tsconfig.node.json" }
     ]
 }

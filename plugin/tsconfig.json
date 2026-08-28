@@ -1,16 +1,16 @@
-{
-    "compilerOptions": {
-        "strict": true,
-        "noEmit": true,
-        "target": "es6",
-        "moduleResolution": "node",
-        
-        "typeRoots": [
-            "../node_modules/@types",
-            "../node_modules/@figma"
-        ],
+/* This config is a solution file: it compiles nothing and just references two other independent configs — for the plugin sandbox at runtime and for the esbuild script at build time */
 
-        // Skip checking type libraries because of this issue: https://github.com/figma/plugin-typings/issues/90
-        "skipLibCheck": true,
-    }
+{
+    // Compile nothing. The compilation will be handled by other config files downstream
+    "files": [],
+
+    // The references field contains two independent configs. Their projects are compiled separately and never merged (in comparison to the `extends` field)
+    "references": [
+
+        // The main config of the plugin sandbox code
+        { "path": "./tsconfig.plugin.json" },
+
+        // The config for running `esbuild.mjs` at build time
+        { "path": "./tsconfig.node.json" }
+    ]
 }
