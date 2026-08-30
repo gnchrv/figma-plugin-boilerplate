@@ -3,6 +3,7 @@
     "version": "3.4.0",
     "description": "Figma Plugin Description",
     "type": "module",
+    "license": "MIT",
     "engines": {
         "node": ">=24.0.0"
     },
