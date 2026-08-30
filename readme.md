@@ -24,9 +24,9 @@ The template provides both the backend and frontend (UI) of the plugin. The UI i
 | [<img src="docs/plugins/select-siblings-in-auto-layout.png" alt="Select Siblings in Auto-Layout" width="240">](https://www.figma.com/community/plugin/1023271295543606907/Select-Siblings-in-Auto-Layout) | **[Select Siblings in Auto-Layout](https://www.figma.com/community/plugin/1023271295543606907/Select-Siblings-in-Auto-Layout)** | Selects the elements sitting on the same level of an auto-layout frame | **900** |
 
 ## Template Structure
-The backend logic and the UI live in two separate folders and can be worked on independently. Each folder has its own `tsconfig.json` and a config for its bundler: `/plugin` holds the esbuild configuration, `/ui` holds the Vite settings.
+The backend logic and the UI live in two separate folders and can be worked on independently. Each folder has its own `tsconfig.json` and a config for its bundler: [`/plugin`](plugin) holds the esbuild configuration, [`/ui`](ui) holds the Vite settings.
 
-`plugin/index.ts` is the entry point for the backend, `ui/main.tsx` is the one for the UI. Both folders take extra files and subfolders as a plugin grows — just adjust the configs if an entry point moves.
+[`plugin/index.ts`](plugin/index.ts) is the entry point for the backend, [`ui/main.tsx`](ui/main.tsx) is the one for the UI. Both folders take extra files and subfolders as a plugin grows — just adjust the configs if an entry point moves.
 
 ## Environment Variables
 An environment variable is a setting that lives next to the code instead of inside it. It sits in `.env`, a file git ignores, and the code refers to it by name.
@@ -45,7 +45,7 @@ Add the value to `.env`:
 
 --- 
 
-Add the name to the `define` map in `plugin/esbuild.mjs`, so esbuild knows what to look for:
+Add the name to the `define` map in [`plugin/esbuild.mjs`](plugin/esbuild.mjs), so esbuild knows what to look for:
    ```js
    define: {
        'process.env.MY_VARIABLE': JSON.stringify(process.env.MY_VARIABLE)
@@ -54,7 +54,7 @@ Add the name to the `define` map in `plugin/esbuild.mjs`, so esbuild knows what 
 
 ---
 
-Add the type to `plugin/environment.d.ts`, so TypeScript accepts the reference:
+Add the type to [`plugin/environment.d.ts`](plugin/environment.d.ts), so TypeScript accepts the reference:
    ```ts
    const process: {
        env: {
@@ -79,9 +79,9 @@ The project needs Node.js 24 or newer: `--env-file` and npm’s `min-release-age
 3. On the same screen, choose the plugin type: either `Figma design + FigJam` or just `Figma design`. Click “Next”.
 4. Figma offers three templates: `Empty`, `Run once` and `With UI & browser APIs`. We’re writing the plugin from scratch, so pick any of them.
 5. Click “Save as” and choose a temporary folder for Figma’s output.
-6. Open that folder, find `manifest.json` and copy the `id` and `editorType` values into the `manifest.json` in the cloned repository.
+6. Open that folder, find `manifest.json` and copy the `id` and `editorType` values into the [`manifest.json`](manifest.json) in the cloned repository.
 7. Back in Figma, go to `Plugins` → `Manage Plugins…`, find the newly created plugin and remove it.
-8. Go to `Plugins` → `Development` → `Import plugin from manifest…` and select `manifest.json` *stored in this repository*.
+8. Go to `Plugins` → `Development` → `Import plugin from manifest…` and select the [`manifest.json`](manifest.json) *stored in this repository*.
 9. Write some code, then run `npm run dev` to watch it or `npm run build` to produce a production bundle.
 
 ## References
